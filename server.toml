@@ -1,0 +1,41 @@
+#### 服务器配置
+[server]
+# 监听地址
+listen = "127.0.0.1:12346"
+# 连接成功后完成验证的时间限制（毫秒，1000毫秒=1秒）
+auth_timeout = 2000
+
+#### redis 的连接配置
+[redis]
+# 是否启用 redis
+enabled = false
+
+# 连接地址、密码和要使用的数据库索引
+addr = "127.0.0.1:6379"
+password = ""
+db = 0
+# 连接到服务器的超时限制（毫秒，1000毫秒=1秒）
+dial_timeout = 500
+# 读取的超时限制（毫秒，1000毫秒=1秒）
+read_timeout = 1000
+# 写入的超时限制（毫秒，1000毫秒=1秒）
+write_timeout = 3000
+
+
+#### mysql 的链接设置
+[mysql]
+# 是否启用 mysql
+enabled = false
+
+# 连接地址、密码等
+addr = "127.0.0.1:3306"
+username = "demo"
+password = "demo_pwd"
+db = "db_demo"
+collation = "utf8mb4_general_ci"
+# 连接到服务器的超时限制（毫秒，1000毫秒=1秒）
+dial_timeout = 2000
+# 读取的超时限制（毫秒，1000毫秒=1秒）
+read_timeout = 5000
+# 写入的超时限制（毫秒，1000毫秒=1秒）
+write_timeout = 5000

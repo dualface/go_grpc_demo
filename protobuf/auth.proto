@@ -1,0 +1,17 @@
+syntax = "proto3";
+package messages;
+
+option go_package = "/messages";
+
+service Auth {
+    rpc Auth (AuthRequest) returns (AuthReply) {}
+}
+
+message AuthRequest {
+    string token = 1;
+}
+
+message AuthReply {
+    int32 ok = 1;
+    string message = 2;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package messages;
+
+option go_package = "/messages";
+
+service Demo {
+    rpc Say (SayRequest) returns (SayReply) {}
+}
+
+message SayRequest {
+    string content = 1;
+    string sender = 2;
+}
+
+message SayReply {
+    string message = 1;
+}
